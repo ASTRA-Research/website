@@ -71,7 +71,7 @@ const Hero = () => {
     'Empowering minds',
     'Leading with vision',
     'Transforming the world',
-    'We are the ASTRA fellowship'
+    'We are ASTRA'
   ];
 
   const handleAnimationComplete = () => {
