@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 const HeroContainer = styled.section`
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -15,12 +16,17 @@ const HeroContainer = styled.section`
   overflow: hidden;
 `;
 
-const HeroText = styled.div`
-  font-size: 40px; /* Increased font size */
-  font-family: 'Arial', sans-serif; /* Changed font family */
+const HeroText = styled(motion.div)`
+  font-size: 60px;
+  font-family: 'Poppins', sans-serif;
   z-index: 1;
-  transition: transform 0.3s ease;
-  transform: translateY(-20px);
+`;
+
+const SubText = styled(motion.div)`
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1;
+  margin-top: 10px;
 `;
 
 const move = keyframes`
@@ -35,8 +41,8 @@ const Star = styled(motion.div)`
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
   opacity: 0;
-  animation: ${move} 5s ease-in-out infinite; /* Faster movement */
-  
+  animation: ${move} 5s ease-in-out infinite;
+
   ${({ size, top, left, duration, delay }) => `
     width: ${size}px;
     height: ${size}px;
@@ -48,14 +54,14 @@ const Star = styled(motion.div)`
 `;
 
 // Generate Stars
-const generateStars = (numStars) => {
+const generateStars = (numStars, delayStart) => {
   const stars = [];
   for (let i = 0; i < numStars; i++) {
     const size = Math.random() * 3 + 1; // Random size between 1px and 4px
     const top = Math.random() * 100; // Random top position
     const left = Math.random() * 100; // Random left position
     const duration = Math.random() * 5 + 3; // Faster duration between 3s and 8s
-    const delay = Math.random() * 5; // Random delay between 0s and 5s
+    const delay = Math.random() * 5 + delayStart; // Random delay between delayStart and delayStart + 5s
 
     stars.push({ size, top, left, duration, delay });
   }
@@ -65,20 +71,34 @@ const generateStars = (numStars) => {
 const Hero = () => {
   const [showStars, setShowStars] = useState(false);
   const [messageIndex, setMessageIndex] = useState(0);
+  const [showSubText, setShowSubText] = useState(false);
 
   const messages = [
-    'Innovating the future',
-    'Empowering minds',
-    'Leading with vision',
-    'Transforming the world',
+    'Pioneering AI Research',
+    'Empowering Tomorrow’s Innovators',
+    'Shaping the Future of AI',
     'We are ASTRA'
   ];
+
+  useEffect(() => {
+    if (messageIndex === messages.length - 1) {
+      setTimeout(() => {
+        setShowSubText(true);
+      }, 2500); // Delay the appearance of the tagline by the duration of the previous text animation
+    }
+  }, [messageIndex]);
+
+  useEffect(() => {
+    if (showSubText) {
+      setTimeout(() => {
+        setShowStars(true);
+      }, 2500); // Delay the appearance of the stars by the duration of the tagline animation
+    }
+  }, [showSubText]);
 
   const handleAnimationComplete = () => {
     if (messageIndex < messages.length - 1) {
       setMessageIndex(prevIndex => prevIndex + 1);
-    } else {
-      setShowStars(true);
     }
   };
 
@@ -89,29 +109,36 @@ const Hero = () => {
   };
 
   // Generate stars only if animation is done
-  const stars = showStars ? generateStars(300) : [];
+  const stars = showStars ? generateStars(300, 0) : [];
 
   return (
     <HeroContainer id="hero">
-      <HeroText>
-        <motion.div
-          key={messageIndex}
+      <HeroText
+        key={messageIndex}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: -35 }} // Smoothly transition upwards by 10px
+        exit={{ opacity: 0 }}
+        transition={{ duration: 2.5 }} // Slower text animation
+        onAnimationComplete={handleAnimationComplete}
+      >
+        {messages[messageIndex]}
+      </HeroText>
+      {showSubText && (
+        <SubText
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 2 }} /* Slower text animation */
-          onAnimationComplete={handleAnimationComplete}
+          transition={{ duration: 2.5 }} // Fade in duration
         >
-          {messages[messageIndex]}
-        </motion.div>
-      </HeroText>
+          For the advancement of Artificial Intelligence research—by students
+        </SubText>
+      )}
       {stars.map((star, index) => (
         <Star
           key={index}
           initial="hidden"
           animate="visible"
           variants={starVariants}
-          transition={{ duration: 2 }} /* Adjusted transition duration */
+          transition={{ duration: 2 }} // Adjusted transition duration
           style={{
             width: star.size,
             height: star.size,

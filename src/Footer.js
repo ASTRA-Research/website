@@ -53,7 +53,7 @@ const Footer = () => (
   <FooterContainer>
     <FooterContent>
       <SocialLinks>
-        <SocialLink href="https://www.linkedin.com/company/astraorg/mycompany/" target="_blank" rel="noopener noreferrer">
+        <SocialLink href="https://www.linkedin.com/company/astraorg/" target="_blank" rel="noopener noreferrer">
           <FaLinkedinIn />
         </SocialLink>
         <SocialLink href="https://discord.gg/hfQF5UAy4H" target="_blank" rel="noopener noreferrer">

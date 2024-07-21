@@ -93,7 +93,7 @@ const OurTeam = () => {
       name: 'Aryan Singhal',
       role: 'Member of the Board Of Directors',
       image: aryan,
-      url: 'https://www.linkedin.com/in/aryan-singhal-ai/', 
+      url: 'https://www.aisinghal.com/', 
     },
     {
       name: 'Ryan Li',

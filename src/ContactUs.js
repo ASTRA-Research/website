@@ -112,7 +112,7 @@ const ContactUs = () => {
 
   return (
     <ContactUsContainer id="contact-us">
-      <SectionTitle>Contact Us</SectionTitle>
+      <SectionTitle>Get in Touch</SectionTitle>
       <ContactForm onSubmit={handleSubmit}>
         <Input
           type="text"
