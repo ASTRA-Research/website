@@ -6,18 +6,20 @@ const OurWorkContainer = styled.section`
   padding: 2rem; /* smaller padding initially */
   background: #fff;
   color: #000;
-  transition: padding 0.5s ease; /* slower transition for padding change */
+  transition: padding 1s ease; /* Slower transition for padding change */
 `;
 
 const SectionTitle = styled.h2`
   text-align: center;
   margin-bottom: 2rem;
+  transition: opacity 1s ease; /* Slower transition for opacity */
 `;
 
 const WorkItems = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  transition: opacity 1s ease; /* Slower transition for opacity */
 `;
 
 const WorkItem = styled.div`
@@ -89,7 +91,7 @@ const OurWork = () => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const section = document.getElementById('our-work');
-      if (!hasAnimated && section && scrollTop >= section.offsetTop - window.innerHeight / 2) {
+      if (!hasAnimated && section && scrollTop >= section.offsetTop - window.innerHeight / 4) { // Adjusted offset for later trigger
         setIsVisible(true);
         setHasAnimated(true); // Set flag to prevent further animation
       }
