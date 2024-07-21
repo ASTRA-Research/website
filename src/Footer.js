@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaLinkedinIn, FaDiscord, FaTwitter, FaYoutube} from 'react-icons/fa'; // Updated imports
+import { FaLinkedinIn, FaYoutube, FaTwitter, FaMediumM, FaInstagram } from 'react-icons/fa'; // Updated imports
 
 // Styled Components
 const FooterContainer = styled.footer`
@@ -53,17 +53,20 @@ const Footer = () => (
   <FooterContainer>
     <FooterContent>
       <SocialLinks>
-        <SocialLink href="https://www.linkedin.com/company/astraorg/" target="_blank" rel="noopener noreferrer">
+        <SocialLink href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
           <FaLinkedinIn />
-        </SocialLink>
-        <SocialLink href="https://discord.gg/hfQF5UAy4H" target="_blank" rel="noopener noreferrer">
-          <FaDiscord />
-        </SocialLink>
-        <SocialLink href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <FaTwitter />
         </SocialLink>
         <SocialLink href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
           <FaYoutube />
+        </SocialLink>
+        <SocialLink href="https://x.com" target="_blank" rel="noopener noreferrer">
+          <FaTwitter />
+        </SocialLink>
+        <SocialLink href="https://medium.com" target="_blank" rel="noopener noreferrer">
+          <FaMediumM />
+        </SocialLink>
+        <SocialLink href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagram />
         </SocialLink>
       </SocialLinks>
       <OtherLinks>

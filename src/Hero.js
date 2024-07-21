@@ -19,14 +19,21 @@ const HeroContainer = styled.section`
 const HeroText = styled(motion.div)`
   font-size: 60px;
   font-family: 'Poppins', sans-serif;
+  position: absolute; // Changed to absolute to allow independent positioning
+  top: 200px; 
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 `;
 
 const SubText = styled(motion.div)`
   font-size: 30px;
   font-family: 'Poppins', sans-serif;
+  position: absolute; // Absolute positioning to ensure it stays below HeroText
+  top: 300px; 
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
-  margin-top: 10px;
 `;
 
 const move = keyframes`
@@ -116,7 +123,7 @@ const Hero = () => {
       <HeroText
         key={messageIndex}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: -35 }} // Smoothly transition upwards by 10px
+        animate={{ opacity: 1 }} // No vertical movement
         exit={{ opacity: 0 }}
         transition={{ duration: 2.5 }} // Slower text animation
         onAnimationComplete={handleAnimationComplete}
