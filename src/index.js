@@ -1,13 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import OurWOrk from "./OurWork";
+// import App from './App';
+import Navbar from "./Navbar";
+import OurWork from "./OurWork";
+import Hero from "./Hero";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+// import Cursor from "./Cursor";
+import OurTeam from "./OurTeam";
+import ContactUs from "./ContactUs";
+import Footer from "./Footer";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <Cursor /> */}
+    <BrowserRouter>
+      <Navbar />
+    </BrowserRouter>
+    <Hero />
+    <OurWork />
+    <OurTeam />
+    <ContactUs/>
+    <Footer/>
   </React.StrictMode>
 );
 
