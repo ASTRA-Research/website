@@ -117,7 +117,7 @@ const OurTeam = () => {
       </TeamList>
       <ButtonContainer>
         <JoinUsButton href="https://docs.google.com/forms/d/e/1FAIpQLSf1xsxPfhpJ4WFNGnhgYYE6JJrwY5t5ckf3BoXKKc2y82IzJA/viewform" target="_blank" rel="noopener noreferrer">
-          Join Our Team!
+          Join Us!
         </JoinUsButton>
       </ButtonContainer>
     </TeamContainer>

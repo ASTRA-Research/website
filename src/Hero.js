@@ -89,7 +89,7 @@ const Hero = () => {
   };
 
   // Generate stars only if animation is done
-  const stars = showStars ? generateStars(100) : [];
+  const stars = showStars ? generateStars(300) : [];
 
   return (
     <HeroContainer id="hero">
