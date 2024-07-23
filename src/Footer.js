@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaLinkedinIn, FaYoutube, FaTwitter, FaMediumM, FaInstagram } from 'react-icons/fa'; // Updated imports
+import { FaLinkedinIn, FaYoutube, FaXing, FaMediumM, FaInstagram } from 'react-icons/fa'; // Updated imports
 
 // Styled Components
 const FooterContainer = styled.footer`
@@ -60,7 +60,7 @@ const Footer = () => (
           <FaYoutube />
         </SocialLink>
         <SocialLink href="https://x.com" target="_blank" rel="noopener noreferrer">
-          <FaTwitter />
+          <FaXing />
         </SocialLink>
         <SocialLink href="https://medium.com" target="_blank" rel="noopener noreferrer">
           <FaMediumM />

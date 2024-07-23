@@ -14,26 +14,75 @@ const HeroContainer = styled.section`
   color: #fff;
   text-align: center;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 2rem 1rem;
+  }
 `;
 
 const HeroText = styled(motion.div)`
   font-size: 60px;
   font-family: 'Poppins', sans-serif;
-  position: absolute; // Changed to absolute to allow independent positioning
-  top: 200px; 
+  position: absolute;
+  top: 200px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+    top: 150px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 30px;
+    top: 120px;
+  }
+`;
+
+const SubTextContainer = styled.div`
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    top: 220px;
+  }
+
+  @media (max-width: 480px) {
+    top: 180px;
+  }
 `;
 
 const SubText = styled(motion.div)`
   font-size: 30px;
   font-family: 'Poppins', sans-serif;
-  position: absolute; // Absolute positioning to ensure it stays below HeroText
-  top: 300px; 
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+`;
+
+const Tagline = styled(motion.div)`
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
 `;
 
 const move = keyframes`
@@ -131,13 +180,22 @@ const Hero = () => {
         {messages[messageIndex]}
       </HeroText>
       {showSubText && (
-        <SubText
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2.5 }} // Fade in duration
-        >
-          For the advancement of Artificial Intelligence research—by students
-        </SubText>
+        <SubTextContainer>
+          <SubText
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2.5 }} // Fade in duration
+          >
+            For the advancement of Artificial Intelligence research—by students
+          </SubText>
+          <Tagline
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2.5 }} // Fade in duration
+          >
+            Association Of Students for Research in AI
+          </Tagline>
+        </SubTextContainer>
       )}
       {stars.map((star, index) => (
         <Star
