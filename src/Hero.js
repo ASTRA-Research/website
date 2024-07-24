@@ -186,14 +186,14 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 2.5 }} // Fade in duration
           >
-            For the advancement of Artificial Intelligence research—by students
+            Association Of Students for Research in AI
           </SubText>
           <Tagline
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2.5 }} // Fade in duration
           >
-            Association Of Students for Research in AI
+            For the advancement of Artificial Intelligence research—by students
           </Tagline>
         </SubTextContainer>
       )}

@@ -64,21 +64,21 @@ const ReadButton = styled.button`
 
 const projects = [
   {
-    title: 'Can LLMs Verify Arabic Claims? Evaluating the Arabic Fact-Checking Abilities of Multilingual LLMs',
-    authors: 'Ayushman Gupta, Veekshith Rao, Thomas Law, Aryan Singhal, Evan Duan, Ryan Luo Li',
-    description: 'We evaluate the fact-checking abilities of LLMs on Arabic claims using various prompting methods.',
+    title: 'Multi-Omics Approach for Personalized Cancer Treatment',
+    authors: 'Dhruv Ramu, Ayushman Gupta',
+    description: 'Cancer treatment has significantly advanced, particularly through immunotherapy, which utilizes the body\'s immune system to combat cancer. However, patient responses to immunotherapy vary, necessitating a personalized approach. We are employing a multi-omics strategy to tailor immunotherapy regimens for colorectal cancer (CRC) patients, leveraging electronic health records (EHR), genomic, epigenetic, metabolomic, and other omics data.',
     link: '#',
   },
   {
-    title: 'Multilingual fact checking',
+    title: 'Multilingual fact checking using LLMs',
     authors: 'Aryan Singhal, Thomas Law, Coby Kassner, Evan Duan, Aviral Damle, Ayushman Gupta, Ryan Luo Li, Alin Jain',
-    description: 'This is a short description of Project 2.',
+    description: 'The recent rise in digital misinformation makes accurate fact-checking essential. In this paper, we benchmark the multilingual fact-checking capabilities of five LLMs across five languages.',
     link: '#',
   },
   {
-    title: 'Using Hybrid Quantum Physics Informed Neural Networks to Simulate Gravity',
+    title: 'Using Hybrid Quantum Physics Informed Neural Networks to Simulate Fermion Motion',
     authors: 'Aviral Damle, Thomas Law, Evan Duan, Aryan Singhal, Ayushman Gupta',
-    description: 'In this paper, we apply hybrid quantum physics informed neural networks to simulate gravity in various metrics and compute the Ricci tensors for those metrics, and compute computational speedups over classical methods.',
+    description: 'In this paper, we apply hybrid quantum physics informed neural networks to simulate fermion motion in various metrics by solving the Dirac equation in those metric and comparing the performance with classical algorithms.',
     link: '#',
   },
 ];
@@ -117,7 +117,7 @@ const OurWork = () => {
                   <Authors>{project.authors}</Authors>
                   <Description>{project.description}</Description>
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <ReadButton>Read Now</ReadButton>
+                    <ReadButton>Coming Soon!</ReadButton>
                   </a>
                 </WorkItem>
               ))}

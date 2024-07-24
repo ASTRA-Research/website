@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaLinkedinIn, FaYoutube, FaXing, FaMediumM, FaInstagram } from 'react-icons/fa'; // Updated imports
+import { FaLinkedinIn, FaYoutube, FaMediumM, FaInstagram } from 'react-icons/fa';
+import TwitterLogo from "./assets/Twitter_new_X_logo.png"; // Correct import for the image
 
 // Styled Components
 const FooterContainer = styled.footer`
@@ -60,7 +61,7 @@ const Footer = () => (
           <FaYoutube />
         </SocialLink>
         <SocialLink href="https://x.com" target="_blank" rel="noopener noreferrer">
-          <FaXing />
+          <img src={TwitterLogo} alt="Twitter" style={{ width: '1.5rem', height: '1.5rem' }} />
         </SocialLink>
         <SocialLink href="https://medium.com" target="_blank" rel="noopener noreferrer">
           <FaMediumM />
