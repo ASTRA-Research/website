@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaLinkedinIn, FaYoutube, FaMediumM, FaInstagram } from 'react-icons/fa';
+import { FaLinkedinIn, FaMediumM, FaYoutube, FaInstagram } from 'react-icons/fa';
 import TwitterLogo from "./assets/Twitter_new_X_logo.png"; // Correct import for the image
 
 // Styled Components
@@ -54,20 +54,20 @@ const Footer = () => (
   <FooterContainer>
     <FooterContent>
       <SocialLinks>
-        <SocialLink href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <SocialLink href="https://www.linkedin.com/company/astraorg/" target="_blank" rel="noopener noreferrer">
           <FaLinkedinIn />
         </SocialLink>
-        <SocialLink href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+        <SocialLink href="https://www.youtube.com/@ASTRAAIResearch" target="_blank" rel="noopener noreferrer">
           <FaYoutube />
         </SocialLink>
-        <SocialLink href="https://x.com" target="_blank" rel="noopener noreferrer">
+        <SocialLink href="https://x.com/AstraAILab" target="_blank" rel="noopener noreferrer">
           <img src={TwitterLogo} alt="Twitter" style={{ width: '1.5rem', height: '1.5rem' }} />
         </SocialLink>
-        <SocialLink href="https://medium.com" target="_blank" rel="noopener noreferrer">
-          <FaMediumM />
-        </SocialLink>
-        <SocialLink href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <SocialLink href="https://www.instagram.com/astra.ai.lab/" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
+        </SocialLink>
+        <SocialLink href="https://medium.com/@astra.ai.lab" target="_blank" rel="noopener noreferrer">
+          <FaMediumM />
         </SocialLink>
       </SocialLinks>
       <OtherLinks>
