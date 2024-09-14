@@ -75,12 +75,7 @@ const projects = [
     description: 'The recent rise in digital misinformation makes accurate fact-checking essential. In this paper, we benchmark the multilingual fact-checking capabilities of five LLMs across five languages.',
     link: '#',
   },
-  {
-    title: 'Using Hybrid Quantum Physics Informed Neural Networks to Simulate Fermion Motion',
-    authors: 'Aviral Damle, Thomas Law, Evan Duan, Aryan Singhal, Ayushman Gupta',
-    description: 'In this paper, we apply hybrid quantum physics informed neural networks to simulate fermion motion in various metrics by solving the Dirac equation in those metric and comparing the performance with classical algorithms.',
-    link: '#',
-  },
+
 ];
 
 const OurWork = () => {

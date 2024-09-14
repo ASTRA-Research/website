@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 
 // Styled Components
 const ContactUsContainer = styled.section`
@@ -86,28 +87,25 @@ const ContactUs = () => {
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('Sending...');
-    
-    try {
-      const response = await fetch('http://localhost:5000/send', { // Adjust the URL if needed
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message }),
-      });
 
-      if (response.ok) {
-        setStatus('Message sent successfully');
-        setName('');
-        setEmail('');
-        setMessage('');
-      } else {
-        setStatus('Failed to send message');
-      }
-    } catch (error) {
+    emailjs.send(
+      'your_service_id',     // Replace with your EmailJS service ID
+      'your_template_id',    // Replace with your EmailJS template ID
+      { name, email, message },
+      'your_user_id'         // Replace with your EmailJS user ID
+    )
+    .then(response => {
+      setStatus('Message sent successfully');
+      setName('');
+      setEmail('');
+      setMessage('');
+    })
+    .catch(error => {
       setStatus('Failed to send message');
-    }
+    });
   };
 
   return (
