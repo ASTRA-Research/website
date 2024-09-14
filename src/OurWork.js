@@ -70,7 +70,7 @@ const projects = [
     link: '#',
   },
   {
-    title: 'Multilingual fact checking using LLMs',
+    title: 'Multilingual Fact Checking Using LLMs',
     authors: 'Aryan Singhal, Thomas Law, Coby Kassner, Evan Duan, Aviral Damle, Ayushman Gupta, Ryan Luo Li, Alin Jain',
     description: 'The recent rise in digital misinformation makes accurate fact-checking essential. In this paper, we benchmark the multilingual fact-checking capabilities of five LLMs across five languages.',
     link: '#',
