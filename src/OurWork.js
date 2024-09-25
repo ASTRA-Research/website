@@ -64,18 +64,17 @@ const ReadButton = styled.button`
 
 const projects = [
   {
+    title: 'Multilingual Fact Checking Using LLMs',
+    authors: 'Aryan Singhal, Thomas Law, Coby Kassner, Ayushman Gupta, Evan Duan, Aviral Damle, Ryan Luo Li',
+    description: 'The recent rise in digital misinformation makes accurate fact-checking essential. In this paper, we investigate the multilingual fact-checking capabilities of five LLMs across five languages using various prompting methods.',
+    link: '#',
+  },
+  {
     title: 'Multi-Omics Approach for Personalized Cancer Treatment',
     authors: 'Dhruv Ramu, Ayushman Gupta',
     description: 'Cancer treatment has significantly advanced, particularly through immunotherapy, which utilizes the body\'s immune system to combat cancer. However, patient responses to immunotherapy vary, necessitating a personalized approach. We are employing a multi-omics strategy to tailor immunotherapy regimens for colorectal cancer (CRC) patients, leveraging electronic health records (EHR), genomic, epigenetic, metabolomic, and other omics data.',
     link: '#',
   },
-  {
-    title: 'Multilingual Fact Checking Using LLMs',
-    authors: 'Aryan Singhal, Thomas Law, Coby Kassner, Evan Duan, Aviral Damle, Ayushman Gupta, Ryan Luo Li, Alin Jain',
-    description: 'The recent rise in digital misinformation makes accurate fact-checking essential. In this paper, we benchmark the multilingual fact-checking capabilities of five LLMs across five languages.',
-    link: '#',
-  },
-
 ];
 
 const OurWork = () => {
